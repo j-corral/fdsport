@@ -27,208 +27,280 @@
             ?>
         </div>
         <div class="row"></div>
+        <!--<div class="row"></div>
         <div class="row"></div>
         <div class="row"></div>
-        <div class="row"></div>
-        <div class="row"></div>
+        <div class="row"></div>-->
 
         <!-- Page Contents -->
-        <!-- TODO: petit soucis de taille-->
+
+        <!-- News -->
         <div class="row">
-            <h2>Nouvautés et actualités</h2>
+            <h2 class="ui header">Nouvautés et actualités</h2>
         </div>
-        <div class="row">
-            <div class="two wide column">
-                <i class="chevron left icon"></i>
-            </div>
-            <div class="four wide column">
-                <div class="ui link cards">
-                    <div class="card">
-                        <div class="image">
-                            <img src="images/om.gif" alt="om">
-                        </div>
-                        <div class="content">
-                            <div class="header">OLYMPIQUE DE MARSEILLE / SC BRAGA EUROPA LEAGUE</div>
-                            <div class="meta">
-                                <a>Football</a>
-                            </div>
-                            <div class="description">
-                                09/02/18 - 19h
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="four wide column">
-                <div class="ui link cards">
-                    <div class="card">
-                        <div class="image">
-                            <img src="images/ol.gif" alt="om">
-                        </div>
-                        <div class="content">
-                            <div class="header">OLYMPIQUE LYONNAIS / SAINT-ETIENNE LIGUE 1 CONFORAMA - 27EME JOURNEE</div>
-                            <div class="meta">
-                                <a>Football</a>
-                            </div>
-                            <div class="description">
-                                09/02/18 - 19h
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="four wide column">
-                <div class="ui link cards">
-                    <div class="card">
-                        <div class="image">
-                            <img src="images/as_saint_etienne.jpg" alt="om">
-                        </div>
-                        <div class="content">
-                            <div class="header">AS SAINT-ETIENNE / MARSEILLE LIGUE 1 CONFORAMA - 25EME JOURNEE</div>
-                            <div class="meta">
-                                <a>Football</a>
-                            </div>
-                            <div class="description">
-                                09/02/18 - 19h
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="two wide column">
-                <i class="chevron right icon"></i>
-            </div>
-        </div>
+        <!-- Todo: add horizontal scroll -->
+        <!--<span class="left">
+            <i class="large chevron left icon"></i>
+        </span>
+        <span class="right">
+            <i class="large chevron right icon"></i>
+        </span>-->
 
         <div class="row">
-            <h2>Promotions</h2>
-        </div>
-        <div class="row">
-            <div class="two wide column">
-                <i class="chevron left icon"></i>
-            </div>
-            <div class="four wide column">
+            <div class="ui fluid grid centered container">
                 <div class="ui link cards">
-                    <div class="card">
-                        <div class="image">
-                            <img src="images/om.gif" alt="om">
+                    <a class="ui blue small card" href="#om">
+                        <div class="ui small centered image">
+                            <img src="/images/om.jpg">
                         </div>
                         <div class="content">
-                            <div class="header">OLYMPIQUE DE MARSEILLE / SC BRAGA EUROPA LEAGUE</div>
                             <div class="meta">
-                                <a>Football</a>
+                                <span class="ui tiny tag label category">Football</span>
+                                <span class="right floated time">
+                                <i class="clock icon"></i>
+                                    09/02/18 - 19h
+                                </span>
                             </div>
+                            <div class="ui clearing divider"></div>
                             <div class="description">
-                                09/02/18 - 19h
+                                <div class="ui small left aligned header">OLYMPIQUE DE MARSEILLE / SC BRAGA</div>
+                                <p>EUROPA LEAGUE</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="four wide column">
-                <div class="ui link cards">
-                    <div class="card">
-                        <div class="image">
-                            <img src="images/ol.gif" alt="om">
+                        <div class="extra content">
+                            <span class="left floated">
+                                <i class="marker icon"></i>
+                                Orange Velodrome
+                            </span>
+                        </div>
+                    </a>
+                    <a class="ui red small card" href="#ol">
+                        <div class="ui small centered image">
+                            <img src="images/ol.jpg" alt="om">
                         </div>
                         <div class="content">
-                            <div class="header">OLYMPIQUE LYONNAIS / SAINT-ETIENNE LIGUE 1 CONFORAMA - 27EME JOURNEE</div>
                             <div class="meta">
-                                <a>Football</a>
-                            </div>
-                            <div class="description">
+                                <span class="ui tiny tag label category">Football</span>
+                                <span class="right floated time">
+                                <i class="clock icon"></i>
                                 09/02/18 - 19h
+                                </span>
+                            </div>
+                            <div class="ui divider"></div>
+                            <div class="description">
+                                <div class="ui small left aligned header">OLYMPIQUE LYONNAIS / SAINT-ETIENNE</div>
+                                <p>LIGUE 1 CONFORAMA - 27EME JOURNEE</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="four wide column">
-                <div class="ui link cards">
-                    <div class="card">
-                        <div class="image">
+                        <div class="extra content">
+                            <span class="left floated">
+                                <i class="marker icon"></i>
+                                Groupama stadium
+                            </span>
+                        </div>
+                    </a>
+                    <a class="ui green small card" href="#asse">
+                        <div class="ui small centered image">
                             <img src="images/as_saint_etienne.jpg" alt="om">
                         </div>
                         <div class="content">
-                            <div class="header">AS SAINT-ETIENNE / MARSEILLE LIGUE 1 CONFORAMA - 25EME JOURNEE</div>
                             <div class="meta">
-                                <a>Football</a>
-                            </div>
-                            <div class="description">
+                                <span class="ui tiny tag label category">Football</span>
+                                <span class="right floated time">
+                                <i class="clock icon"></i>
                                 09/02/18 - 19h
+                                </span>
+                            </div>
+                            <div class="ui divider"></div>
+                            <div class="description">
+                                <div class="ui small left aligned header">AS SAINT-ETIENNE / MARSEILLE</div>
+                                <p>LIGUE 1 CONFORAMA - 25EME JOURNEE</p>
                             </div>
                         </div>
-                    </div>
+                        <div class="extra content">
+                            <span class="left floated">
+                                <i class="marker icon"></i>
+                                Stade Geoffroy
+                            </span>
+                        </div>
+                    </a>
                 </div>
-            </div>
-            <div class="two wide column">
-                <i class="chevron right icon"></i>
             </div>
         </div>
-
+        <div class="ui section divider"></div>
         <div class="row">
-            <h2>Autour de moi</h2>
+            <h2 class="ui header">Promotions</h2>
         </div>
         <div class="row">
-            <div class="two wide column">
-                <i class="chevron left icon"></i>
-            </div>
-            <div class="four wide column">
+            <div class="ui fluid grid centered container">
                 <div class="ui link cards">
-                    <div class="card">
-                        <div class="image">
-                            <img src="images/om.gif" alt="om">
+                    <a class="ui blue small card" href="#om">
+                        <span class="ui right large corner label">
+                            <i class="shop icon"></i>
+                        </span>
+                        <div class="ui small centered image">
+                            <img src="/images/om.jpg">
                         </div>
                         <div class="content">
-                            <div class="header">OLYMPIQUE DE MARSEILLE / SC BRAGA EUROPA LEAGUE</div>
                             <div class="meta">
-                                <a>Football</a>
+                                <span class="ui tiny tag label category">Football</span>
+                                <span class="right floated time">
+                                <i class="clock icon"></i>
+                                    09/02/18 - 19h
+                                </span>
                             </div>
+                            <div class="ui clearing divider"></div>
                             <div class="description">
-                                09/02/18 - 19h
+                                <div class="ui small left aligned header">OLYMPIQUE DE MARSEILLE / SC BRAGA</div>
+                                <p>EUROPA LEAGUE</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="four wide column">
-                <div class="ui link cards">
-                    <div class="card">
-                        <div class="image">
-                            <img src="images/ol.gif" alt="om">
+                        <div class="extra content">
+                            <span class="left floated">
+                                <i class="marker icon"></i>
+                                Orange Velodrome
+                            </span>
+                        </div>
+                    </a>
+                    <a class="ui red small card" href="#ol">
+                        <div class="ui small centered image">
+                            <img src="images/ol.jpg" alt="om">
                         </div>
                         <div class="content">
-                            <div class="header">OLYMPIQUE LYONNAIS / SAINT-ETIENNE LIGUE 1 CONFORAMA - 27EME JOURNEE</div>
                             <div class="meta">
-                                <a>Football</a>
-                            </div>
-                            <div class="description">
+                                <span class="ui tiny tag label category">Football</span>
+                                <span class="right floated time">
+                                <i class="clock icon"></i>
                                 09/02/18 - 19h
+                                </span>
+                            </div>
+                            <div class="ui divider"></div>
+                            <div class="description">
+                                <div class="ui small left aligned header">OLYMPIQUE LYONNAIS / SAINT-ETIENNE</div>
+                                <p>LIGUE 1 CONFORAMA - 27EME JOURNEE</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="four wide column">
-                <div class="ui link cards">
-                    <div class="card">
-                        <div class="image">
+                        <div class="extra content">
+                            <span class="left floated">
+                                <i class="marker icon"></i>
+                                Groupama stadium
+                            </span>
+                        </div>
+                    </a>
+                    <a class="ui green small card" href="#asse">
+                        <div class="ui small centered image">
                             <img src="images/as_saint_etienne.jpg" alt="om">
                         </div>
                         <div class="content">
-                            <div class="header">AS SAINT-ETIENNE / MARSEILLE LIGUE 1 CONFORAMA - 25EME JOURNEE</div>
                             <div class="meta">
-                                <a>Football</a>
-                            </div>
-                            <div class="description">
+                                <span class="ui tiny tag label category">Football</span>
+                                <span class="right floated time">
+                                <i class="clock icon"></i>
                                 09/02/18 - 19h
+                                </span>
+                            </div>
+                            <div class="ui divider"></div>
+                            <div class="description">
+                                <div class="ui small left aligned header">AS SAINT-ETIENNE / MARSEILLE</div>
+                                <p>LIGUE 1 CONFORAMA - 25EME JOURNEE</p>
                             </div>
                         </div>
-                    </div>
+                        <div class="extra content">
+                            <span class="left floated">
+                                <i class="marker icon"></i>
+                                Stade Geoffroy
+                            </span>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="two wide column">
-                <i class="chevron right icon"></i>
+        </div>
+        <div class="ui section divider"></div>
+        <div class="row">
+            <h2 class="ui header">Autour de moi</h2>
+        </div>
+        <div class="row">
+            <div class="ui fluid grid centered container">
+                <div class="ui link cards">
+                    <a class="ui blue small card" href="#om">
+                        <span class="ui right large corner label">
+                            <i class="shop icon"></i>
+                        </span>
+                        <div class="ui small centered image">
+                            <img src="/images/om.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="meta">
+                                <span class="ui tiny tag label category">Football</span>
+                                <span class="right floated time">
+                                <i class="clock icon"></i>
+                                    09/02/18 - 19h
+                                </span>
+                            </div>
+                            <div class="ui clearing divider"></div>
+                            <div class="description">
+                                <div class="ui small left aligned header">OLYMPIQUE DE MARSEILLE / SC BRAGA</div>
+                                <p>EUROPA LEAGUE</p>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <span class="left floated">
+                                <i class="marker icon"></i>
+                                Orange Velodrome
+                            </span>
+                        </div>
+                    </a>
+                    <a class="ui red small card" href="#ol">
+                        <div class="ui small centered image">
+                            <img src="images/ol.jpg" alt="om">
+                        </div>
+                        <div class="content">
+                            <div class="meta">
+                                <span class="ui tiny tag label category">Football</span>
+                                <span class="right floated time">
+                                <i class="clock icon"></i>
+                                09/02/18 - 19h
+                                </span>
+                            </div>
+                            <div class="ui divider"></div>
+                            <div class="description">
+                                <div class="ui small left aligned header">OLYMPIQUE LYONNAIS / SAINT-ETIENNE</div>
+                                <p>LIGUE 1 CONFORAMA - 27EME JOURNEE</p>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <span class="left floated">
+                                <i class="marker icon"></i>
+                                Groupama stadium
+                            </span>
+                        </div>
+                    </a>
+                    <a class="ui green small card" href="#asse">
+                        <div class="ui small centered image">
+                            <img src="images/as_saint_etienne.jpg" alt="om">
+                        </div>
+                        <div class="content">
+                            <div class="meta">
+                                <span class="ui tiny tag label category">Football</span>
+                                <span class="right floated time">
+                                <i class="clock icon"></i>
+                                09/02/18 - 19h
+                                </span>
+                            </div>
+                            <div class="ui divider"></div>
+                            <div class="description">
+                                <div class="ui small left aligned header">AS SAINT-ETIENNE / MARSEILLE</div>
+                                <p>LIGUE 1 CONFORAMA - 25EME JOURNEE</p>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <span class="left floated">
+                                <i class="marker icon"></i>
+                                Stade Geoffroy
+                            </span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
