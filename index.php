@@ -20,7 +20,7 @@
 <!--Include menu-->
 <?php
     include("menu/mobile_menu.html");
-    include("menu/desktop_tablet_menu");
+    include("menu/desktop_tablet_menu.html");
 ?>
 
 
