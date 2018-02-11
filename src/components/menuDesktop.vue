@@ -2,30 +2,25 @@
     <div class="ui tablet computer only grid">
         <div class="ui top fixed menu">
             <div class="ui container">
-                <!--<a href="#back" class="hidden item borderless">
-                    <i class="large angle left icon grey"></i>
-                </a>-->
-                <a class="item borderless">
-                    <span class="header">FDSport</span>
-                </a>
+                <router-link to="/" class="header item borderless">FDSport</router-link>
 
                 <div class="right menu">
-                    <a href="#ticket" class="item borderless">Billeterie</a>
-                    <a href="#shop" class="item borderless">Boutique</a>
-                    <a href="#shop" class="item borderless">Matériel</a>
+                    <router-link :to="{ name: 'tickets'}" class="item borderless">Billeterie</router-link>
+                    <router-link :to="{ name: 'shop'}" class="item borderless">Boutique</router-link>
+                    <router-link :to="{ name: 'shop.equipment'}" class="item borderless">Matériel</router-link>
                     <!--<div class="ui icon input">
                         <input type="text" placeholder="Recherche...">
                         <i class="search icon"></i>
                     </div>-->
-                    <a href="#search" class="item borderless">
+                    <router-link :to="{ name: 'search'}" class="item borderless">
                         <i class="large search icon grey"></i>
-                    </a>
-                    <a href="#account" class="item borderless">
+                    </router-link>
+                    <router-link :to="{ name: 'account'}" class="item borderless">
                         <i class="large user icon grey"></i>
-                    </a>
-                    <a href="#cart" class="item borderless">
+                    </router-link>
+                    <router-link :to="{ name: 'cart'}" class="item borderless">
                         <i class="large shopping bag icon grey"></i>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>
