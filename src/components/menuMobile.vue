@@ -3,29 +3,29 @@
         <div class="ui bottom fixed menu">
             <div class="ui container grid">
                 <div class="three wide column">
-                    <a href="#ticket" class="item borderless">
+                    <router-link :to="{ name: 'tickets'}" class="item borderless">
                         <i class="large ticket icon"></i>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="three wide column">
-                    <a href="#shop" class="item borderless">
+                    <router-link :to="{ name: 'shop'}" class="item borderless">
                         <i class="large shop icon"></i>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="three wide column">
-                    <a href="#shop" class="item borderless">
+                    <router-link to="/" class="header item borderless">
                         <i class="large home icon"></i>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="three wide column">
-                    <a href="#search" class="item borderless">
+                    <router-link :to="{ name: 'search'}" class="item borderless">
                         <i class="large search icon grey"></i>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="three wide column">
-                    <a href="#account" class="item borderless">
+                    <router-link :to="{ name: 'account'}" class="item borderless">
                         <i class="large user icon grey"></i>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>
