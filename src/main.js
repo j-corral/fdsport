@@ -13,6 +13,7 @@ import Tickets from './pages/Tickets'
 import SingleTicket from './pages/SingleTicket'
 import Shop from './pages/Shop'
 import Equipment from './pages/Equipment'
+import SingleArticle from './pages/SingleArticle'
 import Search from './pages/Search'
 import Account from './pages/Account'
 import Cart from './pages/Cart'
@@ -20,9 +21,11 @@ import Cart from './pages/Cart'
 const routes =  [
     {path: '/', component: Home},
     {path: '/tickets', name:'tickets', component: Tickets},
-    {path: '/tickets/:id', name:'view', component: SingleTicket},
+    {path: '/tickets/:id', name:'tickets.view', component: SingleTicket},
     {path: '/shop', name:'shop', component: Shop},
+    {path: '/shop/:id', name:'shop.view', component: SingleArticle},
     {path: '/shop/equipment', name:'shop.equipment', component: Equipment},
+    {path: '/shop/equipment/:id', name:'shop.equipment.view', component: SingleArticle},
     {path: '/search', name:'search', component: Search},
     {path: '/account', name:'account', component: Account},
     {path: '/cart', name:'cart', component: Cart},

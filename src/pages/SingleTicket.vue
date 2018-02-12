@@ -1,7 +1,7 @@
 <template>
     <div class="ui container">
         <h1 class="ui header">Billet</h1>
-        <div class="ui fluid grid centered container">
+        <div class="ui fluid grid left container">
             <div class="ui active loader" v-if="loading"></div>
             <div class="row">
                 <div class="ui cards">

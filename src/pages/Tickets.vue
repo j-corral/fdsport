@@ -6,7 +6,7 @@
             <div class="ui active loader" v-if="loading"></div>
             <div class="row">
                 <div class="ui link cards">
-                    <router-link :to="{ name: 'view', params:{id:ticket.id}}" class="ui medium card" v-for="ticket in tickets" :key="ticket.id">
+                    <router-link :to="{ name: 'tickets.view', params:{id:ticket.id}}" class="ui medium card" v-for="ticket in tickets" :key="ticket.id">
                         <div class="ui small centered image">
                             <img :src="'https://picsum.photos/200/300?image='+ticket.id">
                         </div>
