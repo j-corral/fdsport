@@ -34,13 +34,14 @@
                                 <div class="description">
                                     <div class="ui small left aligned header">OLYMPIQUE DE MARSEILLE / SC BRAGA</div>
                                     <p>EUROPA LEAGUE</p>
+                                    <span class="left floated">
+                                        <i class="marker icon"></i>
+                                        Orange Velodrome
+                                    </span>
                                 </div>
                             </div>
                             <div class="extra content">
-                            <span class="left floated">
-                                <i class="marker icon"></i>
-                                Orange Velodrome
-                            </span>
+                                <span class="right floated">à partir de <b>29€</b></span>
                             </div>
                         </a>
                         <a class="ui red small card" href="#ol">
@@ -59,13 +60,14 @@
                                 <div class="description">
                                     <div class="ui small left aligned header">OLYMPIQUE LYONNAIS / SAINT-ETIENNE</div>
                                     <p>LIGUE 1 CONFORAMA - 27EME JOURNEE</p>
+                                    <span class="left floated">
+                                        <i class="marker icon"></i>
+                                        Groupama stadium
+                                    </span>
                                 </div>
                             </div>
                             <div class="extra content">
-                            <span class="left floated">
-                                <i class="marker icon"></i>
-                                Groupama stadium
-                            </span>
+                                <span class="right floated">à partir de <b>35€</b></span>
                             </div>
                         </a>
                         <a class="ui green small card" href="#asse">
@@ -84,13 +86,14 @@
                                 <div class="description">
                                     <div class="ui small left aligned header">AS SAINT-ETIENNE / MARSEILLE</div>
                                     <p>LIGUE 1 CONFORAMA - 25EME JOURNEE</p>
+                                    <span class="left floated">
+                                        <i class="marker icon"></i>
+                                        Stade Geoffroy
+                                    </span>
                                 </div>
                             </div>
                             <div class="extra content">
-                            <span class="left floated">
-                                <i class="marker icon"></i>
-                                Stade Geoffroy
-                            </span>
+                                <span class="right floated">à partir de <b>39€</b></span>
                             </div>
                         </a>
                     </div>
@@ -104,9 +107,6 @@
                 <div class="ui fluid grid centered container">
                     <div class="ui link cards">
                         <a class="ui blue small card" href="#om">
-                        <span class="ui right large corner label">
-                            <i class="shop icon"></i>
-                        </span>
                             <div class="ui small centered image">
                                 <img src="../assets/om.jpg">
                             </div>
@@ -122,13 +122,14 @@
                                 <div class="description">
                                     <div class="ui small left aligned header">OLYMPIQUE DE MARSEILLE / SC BRAGA</div>
                                     <p>EUROPA LEAGUE</p>
+                                    <span class="left floated">
+                                        <i class="marker icon"></i>
+                                        Orange Velodrome
+                                    </span>
                                 </div>
                             </div>
                             <div class="extra content">
-                            <span class="left floated">
-                                <i class="marker icon"></i>
-                                Orange Velodrome
-                            </span>
+                                <span class="right floated">à partir de <b>29€</b></span>
                             </div>
                         </a>
                         <a class="ui red small card" href="#ol">
@@ -147,13 +148,14 @@
                                 <div class="description">
                                     <div class="ui small left aligned header">OLYMPIQUE LYONNAIS / SAINT-ETIENNE</div>
                                     <p>LIGUE 1 CONFORAMA - 27EME JOURNEE</p>
+                                    <span class="left floated">
+                                        <i class="marker icon"></i>
+                                        Groupama stadium
+                                    </span>
                                 </div>
                             </div>
                             <div class="extra content">
-                            <span class="left floated">
-                                <i class="marker icon"></i>
-                                Groupama stadium
-                            </span>
+                                <span class="right floated">à partir de <b>35€</b></span>
                             </div>
                         </a>
                         <a class="ui green small card" href="#asse">
@@ -172,13 +174,14 @@
                                 <div class="description">
                                     <div class="ui small left aligned header">AS SAINT-ETIENNE / MARSEILLE</div>
                                     <p>LIGUE 1 CONFORAMA - 25EME JOURNEE</p>
+                                    <span class="left floated">
+                                        <i class="marker icon"></i>
+                                        Stade Geoffroy
+                                    </span>
                                 </div>
                             </div>
                             <div class="extra content">
-                            <span class="left floated">
-                                <i class="marker icon"></i>
-                                Stade Geoffroy
-                            </span>
+                                <span class="right floated">à partir de <b>39€</b></span>
                             </div>
                         </a>
                     </div>
@@ -192,9 +195,6 @@
                 <div class="ui fluid grid centered container">
                     <div class="ui link cards">
                         <a class="ui blue small card" href="#om">
-                        <span class="ui right large corner label">
-                            <i class="shop icon"></i>
-                        </span>
                             <div class="ui small centered image">
                                 <img src="../assets/om.jpg">
                             </div>
@@ -210,13 +210,14 @@
                                 <div class="description">
                                     <div class="ui small left aligned header">OLYMPIQUE DE MARSEILLE / SC BRAGA</div>
                                     <p>EUROPA LEAGUE</p>
+                                    <span class="left floated">
+                                        <i class="marker icon"></i>
+                                        Orange Velodrome
+                                    </span>
                                 </div>
                             </div>
                             <div class="extra content">
-                            <span class="left floated">
-                                <i class="marker icon"></i>
-                                Orange Velodrome
-                            </span>
+                                <span class="right floated">à partir de <b>29€</b></span>
                             </div>
                         </a>
                         <a class="ui red small card" href="#ol">
@@ -235,13 +236,14 @@
                                 <div class="description">
                                     <div class="ui small left aligned header">OLYMPIQUE LYONNAIS / SAINT-ETIENNE</div>
                                     <p>LIGUE 1 CONFORAMA - 27EME JOURNEE</p>
+                                    <span class="left floated">
+                                        <i class="marker icon"></i>
+                                        Groupama stadium
+                                    </span>
                                 </div>
                             </div>
                             <div class="extra content">
-                            <span class="left floated">
-                                <i class="marker icon"></i>
-                                Groupama stadium
-                            </span>
+                                <span class="right floated">à partir de <b>35€</b></span>
                             </div>
                         </a>
                         <a class="ui green small card" href="#asse">
@@ -260,13 +262,14 @@
                                 <div class="description">
                                     <div class="ui small left aligned header">AS SAINT-ETIENNE / MARSEILLE</div>
                                     <p>LIGUE 1 CONFORAMA - 25EME JOURNEE</p>
+                                    <span class="left floated">
+                                        <i class="marker icon"></i>
+                                        Stade Geoffroy
+                                    </span>
                                 </div>
                             </div>
                             <div class="extra content">
-                            <span class="left floated">
-                                <i class="marker icon"></i>
-                                Stade Geoffroy
-                            </span>
+                                <span class="right floated">à partir de <b>39€</b></span>
                             </div>
                         </a>
                     </div>

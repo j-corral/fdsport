@@ -1,7 +1,6 @@
 <template>
     <div class="ui container">
         <h1 class="ui header">Boutique</h1>
-        <p>Lorem boutique</p>
         <div class="ui fluid grid centered container">
             <div class="ui active loader" v-if="loading"></div>
             <div class="row">

@@ -1,9 +1,22 @@
 <template>
     <div class="ui container">
         <h1 class="ui header">Matériel</h1>
-        <p>Lorem boutique</p>
+        <div class="ui fluid grid centered container">
+            <div class="ui active loader" v-if="loading"></div>
+            <div class="row">
+                <div class="link ui cards">
+                    <router-link :to="{ name: 'shop.equipment.view', params:{id:user.id}}" class="ui medium card" v-for="user in users" :key="user.id">
+                        <!--<div class="ui medium card" v-for="user in users">-->
+                            <div class="content">
+                                <p>{{user.id}}</p>
+                                <p>{{user.name}}</p>
+                                <p>{{user.email}}</p>
+                            </div>
+                        <!--</div>-->
+                    </router-link>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
-<script>
-    export default {}
-</script>
+<script src="../js/equipment.js"></script>
