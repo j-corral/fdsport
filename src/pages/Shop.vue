@@ -5,13 +5,13 @@
             <div class="ui active loader" v-if="loading"></div>
             <div class="row">
                 <div class="ui cards">
-                    <div class="ui medium card" v-for="user in users">
+                    <router-link :to="{ name: 'shop.equipment.view', params:{id:user.id}}" class="ui medium card" v-for="user in users" :key="user.id">
                         <div class="content">
                             <p>{{user.id}}</p>
                             <p>{{user.name}}</p>
                             <p>{{user.email}}</p>
                         </div>
-                    </div>
+                    </router-link>
                 </div>
             </div>
         </div>
