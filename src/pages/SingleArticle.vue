@@ -1,13 +1,13 @@
 <template>
     <div class="ui container">
-        <h1 class="ui header">Article</h1>
+        <h1 class="ui header">{{article.featured.name}}</h1>
         <div class="ui fluid stackable grid left container">
             <div class="ui active loader" v-if="loading"></div>
             <div class="equal width row">
                 <div class="ui column cards">
                     <div class="ui medium card">
-                        <div class="ui small centered image">
-                            <img src="../assets/om.jpg">
+                        <div class="ui centered image">
+                            <img :src="this.article.featured.url">
                         </div>
                         <div class="content">
                             <div class="meta">
@@ -15,7 +15,7 @@
                             </div>
                             <div class="description">
                                 <div class="ui small left aligned header">
-                                    <p>{{article.body}}</p>
+                                    <p>{{article.featured.name}}</p>
                                 </div>
                             </div>
                             Rating: <sui-rating :rating="3" :max-rating="5"></sui-rating>
@@ -52,7 +52,7 @@
                                 En stock
                             </div>
                             <div class="ui medium right aligned header">
-                                <h2>29€90</h2>
+                                <h2>{{article.price}}€</h2>
                             </div>
                             <div class="content">
                                 <button class="ui yellow huge button">Ajouter au panier</button>
@@ -62,8 +62,7 @@
                     <div class="ui column">
                         <h2>Description</h2>
                         <p>
-                            {{article.email}}
-                            Dare amicorum Plurimum adhibeatur suadentium pareatur ab studium etiam suadentium amicorum adhibitae lex igitur postulabit suadentium eaque semper quidem ad eaque studium dare audeamus valeat et cunctatio dum faciamus in honesta non eaque acriter aperte in semper ne amicis valeat dare dare lex quidem ad semper audeamus exspectemus suadentium vero ad auctoritas studium faciamus bene consilium non consilium exspectemus ne quidem et exspectemus honesta amicis suadentium adsit semper igitur consilium quidem exspectemus acriter aperte absit honesta ut libere et sed studium amicorum acriter ne si auctoritas eaque quidem dare bene igitur ad postulabit vero pareatur faciamus adhibitae acriter modo exspectemus.
+                            {{article.description}}
                         </p>
                     </div>
                 </div>

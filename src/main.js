@@ -40,7 +40,8 @@ const router = new VueRouter({
 
 
 // Resource Conf
-Vue.http.options.root = 'https://jsonplaceholder.typicode.com';
+Vue.http.options.root = 'http://fdsportapi.hoomies.fr/web/fr';
+//Vue.http.options.root = 'https://jsonplaceholder.typicode.com';
 //Vue.http.headers.common['Authorization'] = 'Basic YXBpOnBhc3N3b3Jk';
 
 // Resource hook after

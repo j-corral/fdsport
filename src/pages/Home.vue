@@ -1,11 +1,25 @@
 <template>
     <div id="home">
         <div class="ui container grid">
-            <!-- Page Contents -->
+
+            <div class="row">
+                <h3 class="ui header">Ajouter votre club</h3>
+            </div>
+            <div class="row">
+                <form action="#" class="ui form">
+                    <div class="inline fields">
+                        <div class="field">
+                            <input type="text" placeholder="Votre club">
+                        </div>
+                        <div class="ui submit button">Ajouter</div>
+                    </div>
+                </form>
+            </div>
 
             <!-- News -->
+            <div class="ui section divider"></div>
             <div class="row">
-                <h2 class="ui header center aligned">Nouvautés et actualités</h2>
+                <h2 class="ui header center aligned">Nouveautés et actualités</h2>
             </div>
             <!-- Todo: add horizontal scroll -->
             <!--<span class="left">
@@ -18,7 +32,8 @@
             <div class="row">
                 <div class="ui fluid grid centered container">
                     <div class="ui link cards">
-                        <a class="ui blue small card" href="#om">
+                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
+                        <!--<a class="ui blue small card" href="#om">-->
                             <div class="ui small centered image">
                                 <img src="../assets/om.jpg">
                             </div>
@@ -43,8 +58,8 @@
                             <div class="extra content">
                                 <span class="right floated">à partir de <b>29€</b></span>
                             </div>
-                        </a>
-                        <a class="ui red small card" href="#ol">
+                        </router-link>
+                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
                             <div class="ui small centered image">
                                 <img src="../assets/ol.jpg" alt="om">
                             </div>
@@ -69,8 +84,8 @@
                             <div class="extra content">
                                 <span class="right floated">à partir de <b>35€</b></span>
                             </div>
-                        </a>
-                        <a class="ui green small card" href="#asse">
+                        </router-link>
+                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
                             <div class="ui small centered image">
                                 <img src="../assets/as_saint_etienne.jpg" alt="om">
                             </div>
@@ -95,7 +110,7 @@
                             <div class="extra content">
                                 <span class="right floated">à partir de <b>39€</b></span>
                             </div>
-                        </a>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -106,7 +121,8 @@
             <div class="row">
                 <div class="ui fluid grid centered container">
                     <div class="ui link cards">
-                        <a class="ui blue small card" href="#om">
+                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
+                            <!--<a class="ui blue small card" href="#om">-->
                             <div class="ui small centered image">
                                 <img src="../assets/om.jpg">
                             </div>
@@ -131,8 +147,8 @@
                             <div class="extra content">
                                 <span class="right floated">à partir de <b>29€</b></span>
                             </div>
-                        </a>
-                        <a class="ui red small card" href="#ol">
+                        </router-link>
+                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
                             <div class="ui small centered image">
                                 <img src="../assets/ol.jpg" alt="om">
                             </div>
@@ -157,8 +173,8 @@
                             <div class="extra content">
                                 <span class="right floated">à partir de <b>35€</b></span>
                             </div>
-                        </a>
-                        <a class="ui green small card" href="#asse">
+                        </router-link>
+                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
                             <div class="ui small centered image">
                                 <img src="../assets/as_saint_etienne.jpg" alt="om">
                             </div>
@@ -183,7 +199,7 @@
                             <div class="extra content">
                                 <span class="right floated">à partir de <b>39€</b></span>
                             </div>
-                        </a>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -194,7 +210,8 @@
             <div class="row">
                 <div class="ui fluid grid centered container">
                     <div class="ui link cards">
-                        <a class="ui blue small card" href="#om">
+                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
+                            <!--<a class="ui blue small card" href="#om">-->
                             <div class="ui small centered image">
                                 <img src="../assets/om.jpg">
                             </div>
@@ -219,8 +236,8 @@
                             <div class="extra content">
                                 <span class="right floated">à partir de <b>29€</b></span>
                             </div>
-                        </a>
-                        <a class="ui red small card" href="#ol">
+                        </router-link>
+                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
                             <div class="ui small centered image">
                                 <img src="../assets/ol.jpg" alt="om">
                             </div>
@@ -245,8 +262,8 @@
                             <div class="extra content">
                                 <span class="right floated">à partir de <b>35€</b></span>
                             </div>
-                        </a>
-                        <a class="ui green small card" href="#asse">
+                        </router-link>
+                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
                             <div class="ui small centered image">
                                 <img src="../assets/as_saint_etienne.jpg" alt="om">
                             </div>
@@ -271,10 +288,63 @@
                             <div class="extra content">
                                 <span class="right floated">à partir de <b>39€</b></span>
                             </div>
-                        </a>
+                        </router-link>
                     </div>
                 </div>
+            </div>
+
+            <!--Links to articles-->
+            <div class="ui section divider"></div>
+            <div class="row">
+                <h2 class="ui header center aligned">Plus d'articles</h2>
+            </div>
+            <div class="twelve wide centered row">
+                    <div class="three wide column">
+                        <router-link :to="{ name: 'shop'}" class="ui move reveal">
+                            <div class="visible content">
+                                <img src="../assets/collection_homme.jpg" class="ui medium image">
+                            </div>
+                            <div class="hidden centered content">
+                                <br/><br/><br/><br/>
+                                <h3>Collection Homme</h3>
+                            </div>
+                        </router-link>
+                    </div>
+                    <div class="three wide column">
+                        <router-link :to="{ name: 'shop'}" class="ui move reveal">
+                            <div class="visible content">
+                                <img src="../assets/collection_femme.jpg" class="ui medium image">
+                            </div>
+                            <div class="hidden centered content">
+                                <br/><br/><br/><br/>
+                                <h3>Collection Femme</h3>
+                            </div>
+                        </router-link>
+                    </div>
+                    <div class="three wide column">
+                        <router-link :to="{ name: 'shop'}" class="ui move reveal">
+                            <div class="visible content">
+                                <img src="../assets/accessoires.jpg" class="ui medium image">
+                            </div>
+                            <div class="hidden centered content">
+                                <br/><br/><br/><br/>
+                                <h3>Accessoires</h3>
+                            </div>
+                        </router-link>
+                    </div>
+                    <div class="three wide column">
+                        <router-link :to="{ name: 'shop.equipment'}" class="ui move reveal">
+                            <div class="visible content">
+                                <img src="../assets/materiel.jpg" class="ui medium image">
+                            </div>
+                            <div class="hidden centered content">
+                                <br/><br/><br/><br/>
+                                <h3>Matériel</h3>
+                            </div>
+                        </router-link>
+                    </div>
             </div>
         </div>
     </div>
 </template>
+<script src="../js/home.js"></script>

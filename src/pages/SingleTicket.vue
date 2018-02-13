@@ -3,7 +3,10 @@
         <h1 class="ui header">Billet</h1>
         <div class="ui fluid stackable grid left container">
             <div class="ui active loader" v-if="loading"></div>
-            <h2 class="ui headers">{{ticket.name}}</h2>
+            <div class="ui small image">
+                <img :src="ticket.featured.url">
+            </div>
+            <h2 class="ui headers">{{ticket.home}} / {{ticket.visitor}}</h2>
             <div class="equal width row">
                 <div class="ui column cards">
                     <div class="ui segment column">
@@ -45,7 +48,7 @@
                                     <input class="ui right floated" type="number" min="0" max="100" value="0" style="width: 70px;" disabled></div>
                                 </div>
                                 <div class="ui medium right aligned header">
-                                    <h2>Total: 29€90</h2>
+                                    <h2>Total:  {{ticket.price}}€</h2>
                                     <button class="ui yellow huge button">Ajouter au panier</button>
                                 </div>
                             </div>
@@ -54,9 +57,10 @@
                     <div class="ui column">
                         <h2>Description</h2>
                         <p>
-                            {{ticket.body}}
-                            Dare amicorum Plurimum adhibeatur suadentium pareatur ab studium etiam suadentium amicorum adhibitae lex igitur postulabit suadentium eaque semper quidem ad eaque studium dare audeamus valeat et cunctatio dum faciamus in honesta non eaque acriter aperte in semper ne amicis valeat dare dare lex quidem ad semper audeamus exspectemus suadentium vero ad auctoritas studium faciamus bene consilium non consilium exspectemus ne quidem et exspectemus honesta amicis suadentium adsit semper igitur consilium quidem exspectemus acriter aperte absit honesta ut libere et sed studium amicorum acriter ne si auctoritas eaque quidem dare bene igitur ad postulabit vero pareatur faciamus adhibitae acriter modo exspectemus.
+                            <strong>Match : </strong> {{ticket.home}} / {{ticket.visitor}}
                         </p>
+                        <p><strong>Adresse : </strong> {{ticket.address}}</p>
+                        <p><strong>Type : </strong> {{ticket.sport.name}}</p>
                     </div>
                 </div>
             </div>

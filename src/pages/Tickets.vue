@@ -1,21 +1,33 @@
 <template>
-    <div class="ui container">
-        <h1 class="ui header">Billeterie</h1>
-        <p>Lorem tickets</p>
-        <div class="ui fluid grid centered container">
-            <div class="ui active loader" v-if="loading"></div>
+    <div class="ui grid">
+        <div class="ui container">
+            <h1 class="ui header">Billeterie</h1>
             <div class="row">
-                <div class="ui link cards">
-                    <router-link :to="{ name: 'tickets.view', params:{id:ticket.id}}" class="ui medium card" v-for="ticket in tickets" :key="ticket.id">
-                        <div class="ui small centered image">
-                            <img :src="'https://picsum.photos/200/300?image='+ticket.id">
+                <div class="ui active loader" v-if="loading"></div>
+                <div class="ui four wide column doubling  link cards">
+                    <router-link :to="{ name: 'tickets.view', params:{id:ticket.ticket_id}}" class="ui card" :class="ticket.sport.color" v-for="ticket in tickets" :key="ticket.ticket_id">
+                        <div class="ui tiny centered image">
+                            <img :src="ticket.featured.url">
                         </div>
                         <div class="content">
-                            <div class="description">
-                                <div class="ui small left aligned header">
-                                    {{ticket.title}}
-                                </div>
+                            <div class="meta">
+                                <span class="ui small tag label category">{{ticket.sport.name}}</span>
+                                <span class="right floated time">
+                                    <i class="clock icon"></i>09/02/18 - 19h
+                                </span>
                             </div>
+                            <div class="ui clearing divider"></div>
+                            <div class="description">
+                                <div class="ui small left aligned header">{{ticket.home}} / {{ticket.visitor}}</div>
+                                <p>EUROPA LEAGUE</p>
+                                <p class="center aligned" style="margin-top:2em;">
+                                    <i class="marker icon"></i>
+                                    {{ticket.address}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <p class="center aligned">à partir de <strong class="ui header">{{ticket.price}}€</strong></p>
                         </div>
                     </router-link>
                 </div>

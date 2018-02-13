@@ -1,20 +1,19 @@
 export default {
     data() {
         return {
-            ticket:[],
+            tickets:[],
             loading:false,
         }
     },
     mounted() {
-        this.$ticket = this.$resource('tickets{/id}', {}, {}, {
+        this.$ticket = this.$resource('posts{/id}', {}, {}, {
             before: () => {
                 this.loading = true
             },
             after: () => this.loading = false
         })
-        this.$ticket.query({id:this.$route.params.id}).then((response) => {
-            this.ticket = response.data
-            console.log(this.ticket)
+        this.$ticket.query().then((response) => {
+            this.tickets = response.data
         }, (response) => {
             console.log('error', response)
         })

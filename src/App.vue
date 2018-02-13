@@ -6,6 +6,7 @@
                 <menu-desktop></menu-desktop>
                 <!--Menu mobile include-->
                 <menu-mobile></menu-mobile>
+                <menu-mobile-top></menu-mobile-top>
             </div>
             <div class="row">
                 <router-view></router-view>

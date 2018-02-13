@@ -2,11 +2,11 @@ export default {
     data() {
         return {
             article:[],
-            loading:false,
+            loading:true,
         }
     },
     mounted() {
-        this.$article = this.$resource('users{/id}', {}, {}, {
+        this.$article = this.$resource('products{/id}', {}, {}, {
             before: () => {
                 this.loading = true
             },
