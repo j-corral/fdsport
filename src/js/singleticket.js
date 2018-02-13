@@ -6,7 +6,7 @@ export default {
         }
     },
     mounted() {
-        this.$ticket = this.$resource('comments{/id}', {}, {}, {
+        this.$ticket = this.$resource('tickets{/id}', {}, {}, {
             before: () => {
                 this.loading = true
             },

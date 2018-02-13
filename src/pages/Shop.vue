@@ -1,8 +1,7 @@
 <template>
     <div class="ui container">
         <h1 class="ui header">Boutique</h1>
-        <div class="ui stackable grid centered container">
-            <div class="ui active loader" v-if="loading"></div>
+        <div class="ui stackable grid  container">
 
             <!--Tablet and Computer menu-->
             <div class="tablet computer only twelve wide centered row">
@@ -12,8 +11,8 @@
                             <img src="../assets/collection_homme.jpg" class="ui medium image">
                         </div>
                         <div class="hidden centered content">
-                            <br/><br/><br/><br/>
-                            <h3>Collection Homme</h3>
+                            <br/><br/><br/>
+                            <h3>Collection<br>Homme</h3>
                         </div>
                     </router-link>
                 </div>
@@ -23,8 +22,8 @@
                             <img src="../assets/collection_femme.jpg" class="ui medium image">
                         </div>
                         <div class="hidden centered content">
-                            <br/><br/><br/><br/>
-                            <h3>Collection Femme</h3>
+                            <br/><br/><br/>
+                            <h3>Collection<br>Femme</h3>
                         </div>
                     </router-link>
                 </div>
@@ -69,31 +68,31 @@
             <div class="row">
                 <h2 class="ui header">Tous les articles</h2>
             </div>
-            <br/><br/><br/><br/>
             <div class="row">
-                <div class="ui cards">
-                <!--<sui-card-group>-->
-                    <router-link :to="{ name: 'shop.equipment.view', params:{id:user.id}}" v-for="user in users" :key="user.id">
-                        <sui-card>
-                            <sui-dimmer-dimmable @mouseenter.native="cardActive[user.id] = true" @mouseleave.native="cardActive[user.id] = false">
-                                <sui-image src="https://picsum.photos/200/300?image=1" />
-                                <sui-dimmer blurring :active="cardActive[user.id]">
-                                    <sui-button inverted>Voir l'article</sui-button>
-                                </sui-dimmer>
-                            </sui-dimmer-dimmable>
-                            <sui-card-content>
-                                <sui-card-header>{{user.name}}</sui-card-header>
-                                <sui-card-meta>{{user.email}}</sui-card-meta>
-                            </sui-card-content>
-                            <sui-card-content extra>
-                                <p>{{user.id}}</p>
-                            </sui-card-content>
-                        </sui-card>
-                    </router-link>
-                </div>
-                <!--</sui-card-group>-->
+                <div class="ui active loader" v-if="loading"></div>
             </div>
         </div>
+       <div class="row">
+           <div class="ui four wide column doubling  link cards">
+               <router-link :to="{ name: 'shop.equipment.view', params:{id:product.product_id}}" class="ui card"  v-for="product in products" :key="product.product_id">
+                   <div class="ui small centered image">
+                       <img :src="product.featured.url">
+                   </div>
+                   <div class="content">
+                       <div class="meta">
+                           <span class="ui small tag label category">{{product.type.name}}</span>
+                       </div>
+                       <div class="ui clearing divider"></div>
+                       <div class="description">
+                           <div class="ui small left aligned header">{{product.featured.name}}</div>
+                       </div>
+                   </div>
+                   <div class="extra content">
+                       <p class="center aligned"><strong class="ui header">{{product.price}}€</strong></p>
+                   </div>
+               </router-link>
+           </div>
+       </div>
     </div>
 </template>
 <script src="../js/shop.js"></script>

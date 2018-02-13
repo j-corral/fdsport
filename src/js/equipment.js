@@ -1,19 +1,19 @@
 export default {
     data() {
         return {
-            users:[],
-            loading:false,
+            equipments:[],
+            loading:true,
         }
     },
     mounted() {
-        this.$user = this.$resource('users{/id}', {}, {}, {
+        this.equipments = this.$resource('products{/id}', {}, {}, {
             before: () => {
                 this.loading = true
             },
             after: () => this.loading = false
         })
-        this.$user.query().then((response) => {
-            this.users = response.data
+        this.equipments.query().then((response) => {
+            this.equipments = response.data
         }, (response) => {
             console.log('error', response)
         })
