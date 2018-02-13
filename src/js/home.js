@@ -1,20 +1,19 @@
 export default {
     data() {
         return {
-            users:[],
+            tickets:[],
             loading:false,
-            cardActive:[],
         }
     },
     mounted() {
-        this.$user = this.$resource('users{/id}', {}, {}, {
+        this.$ticket = this.$resource('posts{/id}', {}, {}, {
             before: () => {
                 this.loading = true
             },
             after: () => this.loading = false
-        });
-        this.$user.query().then((response) => {
-            this.users = response.data
+        })
+        this.$ticket.query().then((response) => {
+            this.tickets = response.data
         }, (response) => {
             console.log('error', response)
         })
