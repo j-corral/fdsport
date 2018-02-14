@@ -6,7 +6,10 @@
             <div class="ui small image">
                 <img :src="ticket.featured.url">
             </div>
-            <h2 class="ui headers">{{ticket.home}} / {{ticket.visitor}}</h2>
+            <div>
+                <h2 class="ui header">{{ticket.home | uppercase}} / {{ticket.visitor | uppercase}}</h2>
+                <p>{{ticket.intro}}</p>
+            </div>
             <div class="equal width row">
                 <div class="ui column cards">
                     <div class="ui segment column">
@@ -57,10 +60,11 @@
                     <div class="ui column">
                         <h2>Description</h2>
                         <p>
-                            <strong>Match : </strong> {{ticket.home}} / {{ticket.visitor}}
+                            <strong>Match : </strong> {{ticket.home | uppercase}} / {{ticket.visitor | uppercase}}
                         </p>
                         <p><strong>Adresse : </strong> {{ticket.address}}</p>
                         <p><strong>Type : </strong> {{ticket.sport.name}}</p>
+                        <p><strong>Date : </strong> {{ticket.date | frontEndDateFormat}}</p>
                     </div>
                 </div>
             </div>
