@@ -54,6 +54,41 @@ Vue.http.interceptors.push((request, next) => {
 })
 
 
+// filters
+import moment from 'moment'
+Vue.filter('frontEndDateFormat', function(date) {
+    if(date){
+        return moment(date, 'YYYY-MM-DDH:i:s').format('DD/MM/YYYY')
+    }
+})
+
+Vue.filter('uppercase', function(value) {
+    if(value){
+        return value.toUpperCase()
+    }
+})
+
+Vue.filter('lowercase', function(value) {
+    if(value){
+        return value.toLowerCase()
+    }
+})
+
+Vue.filter('nl2br', function nl2br(text) {
+    let reg = /\n\r/g
+    if (text && text !== null) {
+        let i, s = '', lines = text.split(reg), l = lines.length;
+
+        for (i = 0; i < l; ++i) {
+            s += lines[i];
+            (i !== l - 1) && (s += '<br/>');
+        }
+
+        return s;
+    }
+    return text;
+})
+
 // Vue conf
 import App from './App'
 const app = new Vue({

@@ -13,13 +13,13 @@
                             <div class="meta">
                                 <span class="ui small tag label category">{{ticket.sport.name}}</span>
                                 <span class="right floated time">
-                                    <i class="clock icon"></i>09/02/18 - 19h
+                                    <i class="clock icon"></i>{{ticket.date | frontEndDateFormat}}
                                 </span>
                             </div>
                             <div class="ui clearing divider"></div>
                             <div class="description">
-                                <div class="ui small left aligned header">{{ticket.home}} / {{ticket.visitor}}</div>
-                                <p>EUROPA LEAGUE</p>
+                                <div class="ui small left aligned header">{{ticket.home | uppercase}} / {{ticket.visitor | uppercase}}</div>
+                                <p>{{ticket.intro}}</p>
                                 <p class="center aligned" style="margin-top:2em;">
                                     <i class="marker icon"></i>
                                     {{ticket.address}}

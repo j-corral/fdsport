@@ -84,7 +84,8 @@
                        </div>
                        <div class="ui clearing divider"></div>
                        <div class="description">
-                           <div class="ui small left aligned header">{{product.featured.name}}</div>
+                           <div class="ui small left aligned header">{{product.name}}</div>
+                           <p>{{product.intro}}</p>
                        </div>
                    </div>
                    <div class="extra content">

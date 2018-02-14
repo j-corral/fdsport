@@ -1,6 +1,6 @@
 <template>
     <div class="ui container">
-        <h1 class="ui header">{{article.featured.name}}</h1>
+        <h1 class="ui header">{{article.name}}</h1>
         <div class="ui fluid stackable grid left container">
             <div class="ui active loader" v-if="loading"></div>
             <div class="equal width row">
@@ -10,15 +10,16 @@
                             <img :src="this.article.featured.url">
                         </div>
                         <div class="content">
-                            <div class="meta">
-                                <h2 class="ui headers">{{article.name}}</h2>
-                            </div>
+                            <!--<div class="meta">
+                                <h2 class="ui header">{{article.name | uppercase }}</h2>
+                            </div>-->
                             <div class="description">
-                                <div class="ui small left aligned header">
-                                    <p>{{article.featured.name}}</p>
+                                <div class="ui small left aligned">
+                                    <p>{{article.intro}}</p>
                                 </div>
                             </div>
-                            Rating: <sui-rating :rating="3" :max-rating="5"></sui-rating>
+                            <div class="ui divider"></div>
+                            Avis : <sui-rating :rating="3" :max-rating="5"></sui-rating>
                         </div>
                     </div>
                     <div class="ui segment column">
@@ -61,9 +62,7 @@
                     </div>
                     <div class="ui column">
                         <h2>Description</h2>
-                        <p>
-                            {{article.description}}
-                        </p>
+                        <p v-html="$options.filters.nl2br(article.description)"></p>
                     </div>
                 </div>
             </div>
