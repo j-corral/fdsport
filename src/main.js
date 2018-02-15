@@ -13,6 +13,9 @@ import Tickets from './pages/Tickets'
 import SingleTicket from './pages/SingleTicket'
 import Shop from './pages/Shop'
 import Equipment from './pages/Equipment'
+import Man from './pages/Man'
+import Wooman from './pages/Wooman'
+import Accessories from './pages/Accessories'
 import SingleArticle from './pages/SingleArticle'
 import Search from './pages/Search'
 import Account from './pages/Account'
@@ -24,6 +27,9 @@ const routes =  [
     {path: '/tickets/:id', name:'tickets.view', component: SingleTicket},
     {path: '/shop', name:'shop', component: Shop},
     {path: '/shop/:id', name:'shop.view', component: SingleArticle},
+    {path: '/shop/man', name:'shop.man', component: Man},
+    {path: '/shop/wooman', name:'shop.wooman', component: Wooman},
+    {path: '/shop/accessories', name:'shop.accessories', component: Accessories},
     {path: '/shop/equipment', name:'shop.equipment', component: Equipment},
     {path: '/shop/equipment/:id', name:'shop.equipment.view', component: SingleArticle},
     {path: '/search', name:'search', component: Search},

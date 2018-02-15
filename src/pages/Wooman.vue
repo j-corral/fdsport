@@ -1,6 +1,6 @@
 <template>
     <div class="ui container">
-        <h1 class="ui header">Matériel</h1>
+        <h1 class="ui header">Collection femme</h1>
         <!--<div class="ui fluid grid centered container">
             <div class="ui active loader" v-if="loading"></div>
             <div class="row">
@@ -39,4 +39,4 @@
         </div>
     </div>
 </template>
-<script src="../js/equipment.js"></script>
+<script src="../js/wooman.js"></script>

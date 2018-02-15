@@ -6,7 +6,7 @@ export default {
         }
     },
     mounted() {
-        this.products = this.$resource('products/equipment', {}, {}, {
+        this.products = this.$resource('products/man', {}, {}, {
             before: () => {
                 this.loading = true
             },

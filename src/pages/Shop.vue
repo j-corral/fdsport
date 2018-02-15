@@ -6,7 +6,7 @@
             <!--Tablet and Computer menu-->
             <div class="tablet computer only twelve wide centered row">
                 <div class="three wide column">
-                    <router-link :to="{ name: 'shop'}" class="ui move reveal">
+                    <router-link :to="{ name: 'shop.man'}" class="ui move reveal">
                         <div class="visible content">
                             <img src="../assets/collection_homme.jpg" class="ui medium image">
                         </div>
@@ -17,7 +17,7 @@
                     </router-link>
                 </div>
                 <div class="three wide column">
-                    <router-link :to="{ name: 'shop'}" class="ui move reveal">
+                    <router-link :to="{ name: 'shop.wooman'}" class="ui move reveal">
                         <div class="visible content">
                             <img src="../assets/collection_femme.jpg" class="ui medium image">
                         </div>
@@ -28,7 +28,7 @@
                     </router-link>
                 </div>
                 <div class="three wide column">
-                    <router-link :to="{ name: 'shop'}" class="ui move reveal">
+                    <router-link :to="{ name: 'shop.accessories'}" class="ui move reveal">
                         <div class="visible content">
                             <img src="../assets/accessoires.jpg" class="ui medium image">
                         </div>
