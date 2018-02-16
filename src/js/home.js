@@ -28,7 +28,7 @@ export default {
                 after: () => this.loading = false
             });
             this.$products.query().then((response) => {
-                this.products = response.data
+                this.products = response.data;
             }, (response) => {
                 console.log('error', response)
             })
