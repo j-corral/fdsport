@@ -2,7 +2,7 @@
     <div class="ui tablet computer only grid">
         <div class="ui top fixed menu">
             <div class="ui container">
-                <router-link to="/" class="header item borderless">FDSport</router-link>
+                <router-link to="/" class="ui image item borderless"><img src="../assets/logo_FD_noir.png" alt="logo"></router-link>
 
                 <div class="right menu">
                     <router-link :to="{ name: 'tickets'}" class="item borderless">Billeterie</router-link>

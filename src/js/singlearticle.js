@@ -46,11 +46,11 @@ export default {
                 }
             }).then((response) => {
                 this.user = response.data
+                this.$cookies.set("user", JSON.stringify(this.user), Infinity);
                 console.log('Put envoyé', this.user)
             }, (response) => {
                 console.log('error', response)
             })
-            //TODO: print $user axes information
         }
     },
     mounted() {

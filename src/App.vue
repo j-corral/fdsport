@@ -7,6 +7,8 @@
                 <!--Menu mobile include-->
                 <menu-mobile></menu-mobile>
                 <menu-mobile-top></menu-mobile-top>
+                <!-- modal profiler include -->
+                <modal-profiler></modal-profiler>
             </div>
             <div class="row">
                 <router-view></router-view>
