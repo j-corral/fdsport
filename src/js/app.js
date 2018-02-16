@@ -1,11 +1,12 @@
 import menuMobile from '../components/menuMobile'
 import menuMobileTop from '../components/menuMobileTop'
 import menuDesktop from '../components/menuDesktop'
+import modalProfiler from '../components/modalProfiler'
 
 export default {
     name: 'app',
     components: {
-        menuMobile, menuMobileTop, menuDesktop
+        menuMobile, menuMobileTop, menuDesktop, modalProfiler
     },
     data () {
         return {
@@ -40,6 +41,7 @@ export default {
                     }
                 }).then((response) => {
                     this.user = response.data
+                    this.$cookies.set("user", JSON.stringify(this.user), Infinity);
                     console.log('sha1 generated : ', user_id)
                 }, (response) => {
                     console.log('error', response)
