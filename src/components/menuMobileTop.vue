@@ -8,7 +8,7 @@
                     </a>
                 </div>
                 <div class="column">
-                    <router-link to="/" class="header item borderless">FDSport</router-link>
+                    <router-link to="/" class="header item borderless"><img src="../assets/logo_FD_noir.png" alt="logo"></router-link>
                 </div>
                 <div class="right floated column">
                     <router-link :to="{ name: 'cart'}" class="item borderless">
