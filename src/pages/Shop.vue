@@ -53,13 +53,13 @@
 
             <!--Mobile menu-->
             <div class="mobile only row">
-                <router-link :to="{ name: 'shop'}" class="column">
+                <router-link :to="{ name: 'shop.man'}" class="column">
                     <h2>Collection Homme</h2>
                 </router-link>
-                <router-link :to="{ name: 'shop'}" class="column">
+                <router-link :to="{ name: 'shop.wooman'}" class="column">
                     <h2>Collection Femme</h2>
                 </router-link>
-                <router-link :to="{ name: 'shop'}" class="column">
+                <router-link :to="{ name: 'shop.accessories'}" class="column">
                     <h2>Accessoires</h2>
                 </router-link>
             </div>
