@@ -14,16 +14,18 @@ export default {
             msg: 'Welcome to Your Vue.js App'
         }
     },
-    updated() {
+    mounted() {
         //check if the id cookie is existing
-        var cookieValue = this.$cookies.get("user_id");
+        var cookieValue = this.$cookies.get("user_id")
+        console.log("user_cookie: " + cookieValue)
         if(cookieValue == null) {
             //Generate user id
-            var sha1 = require('sha1');
-            var user_id = sha1(Date.now());
+            var sha1 = require('sha1')
+            var user_id = sha1(Date.now())
 
             //Set new infinite cookie
-            this.$cookies.set("user_id",user_id, Infinity);
+            this.$cookies.set("user_id",user_id, Infinity)
+            console.log("Created cookie: " + this.$cookies.get("user_id"))
 
             this.$user = this.$resource('users/create', {}, {}, {
                 before: () => {
