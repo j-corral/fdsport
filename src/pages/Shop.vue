@@ -53,13 +53,13 @@
 
             <!--Mobile menu-->
             <div class="mobile only row">
-                <router-link :to="{ name: 'shop'}" class="column">
+                <router-link :to="{ name: 'shop.man'}" class="column">
                     <h2>Collection Homme</h2>
                 </router-link>
-                <router-link :to="{ name: 'shop'}" class="column">
+                <router-link :to="{ name: 'shop.wooman'}" class="column">
                     <h2>Collection Femme</h2>
                 </router-link>
-                <router-link :to="{ name: 'shop'}" class="column">
+                <router-link :to="{ name: 'shop.accessories'}" class="column">
                     <h2>Accessoires</h2>
                 </router-link>
             </div>
@@ -74,7 +74,7 @@
         </div>
        <div class="row">
            <div class="ui four wide column doubling  link cards">
-               <router-link :to="{ name: 'shop.equipment.view', params:{id:product.product_id}}" class="ui card"  v-for="product in products" :key="product.product_id">
+               <router-link :to="{ name: 'shop.view', params:{id:product.product_id}}" class="ui card"  v-for="product in products" :key="product.product_id">
                    <div class="ui small centered image">
                        <img :src="product.featured.url">
                    </div>

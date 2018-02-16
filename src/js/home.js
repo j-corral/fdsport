@@ -1,12 +1,12 @@
 export default {
     data() {
         return {
-            tickets:[],
+            //tickets:[],
             loading:false,
         }
     },
     mounted() {
-        this.$ticket = this.$resource('tickets{/id}', {}, {}, {
+        /*this.$ticket = this.$resource('tickets{/id}', {}, {}, {
             before: () => {
                 this.loading = true
             },
@@ -16,6 +16,6 @@ export default {
             this.tickets = response.data
         }, (response) => {
             console.log('error', response)
-        })
+        })*/
     }
 }

@@ -7,7 +7,7 @@
                 <div class="ui column cards">
                     <div class="ui medium card">
                         <div class="ui centered image">
-                            <img :src="this.article.featured.url">
+                            <img :src="article.featured.url">
                         </div>
                         <div class="content">
                             <!--<div class="meta">

@@ -5,7 +5,7 @@
             <div class="ui active loader" v-if="loading"></div>
             <div class="row">
                 <div class="link ui cards">
-                    <router-link :to="{ name: 'shop.product.view', params:{id:user.id}}" class="ui medium card" v-for="user in users" :key="user.id">
+                    <router-link :to="{ name: 'shop.view', params:{id:user.id}}" class="ui medium card" v-for="user in users" :key="user.id">
                         <div class="content">
                             <p>{{user.id}}</p>
                             <p>{{user.name}}</p>
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="ui active loader" v-if="loading"></div>
             <div class="ui four wide column doubling  link cards">
-                <router-link :to="{ name: 'shop.product.view', params:{id:product.product_id}}" class="ui card"  v-for="product in products" :key="product.product_id">
+                <router-link :to="{ name: 'shop.view', params:{id:product.product_id}}" class="ui card"  v-for="product in products" :key="product.product_id">
                     <div class="ui small centered image">
                         <img :src="product.featured.url">
                     </div>

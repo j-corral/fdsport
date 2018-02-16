@@ -2,10 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import SuiVue from 'semantic-ui-vue'
+import VueCookies from 'vue-cookies'
 
-Vue.use(VueRouter);
-Vue.use(VueResource);
+Vue.use(VueRouter)
+Vue.use(VueResource)
 Vue.use(SuiVue);
+Vue.use(VueCookies)
 
 // import pages
 import Home from './pages/Home'
@@ -42,7 +44,7 @@ const routes =  [
 const router = new VueRouter({
     mode: 'history',
     routes
-});
+})
 
 
 // Resource Conf
@@ -83,11 +85,11 @@ Vue.filter('lowercase', function(value) {
 Vue.filter('nl2br', function nl2br(text) {
     let reg = /\n\r/g
     if (text && text !== null) {
-        let i, s = '', lines = text.split(reg), l = lines.length;
+        let i, s = '', lines = text.split(reg), l = lines.length
 
         for (i = 0; i < l; ++i) {
             s += lines[i];
-            (i !== l - 1) && (s += '<br/>');
+            (i !== l - 1) && (s += '<br/>')
         }
 
         return s;
@@ -100,4 +102,4 @@ import App from './App'
 const app = new Vue({
     router,
     render: h => h(App)
-}).$mount('#app');
+}).$mount('#app')
