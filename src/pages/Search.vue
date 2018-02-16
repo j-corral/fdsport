@@ -4,6 +4,4 @@
         <p>Lorem search</p>
     </div>
 </template>
-<script>
-    export default {}
-</script>
+<script src="../js/search.js"></script>
