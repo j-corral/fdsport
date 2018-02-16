@@ -50,7 +50,7 @@ export default {
             }, (response) => {
                 console.log('error', response)
             })
-            //TODO: print $user axes information
+            this.$cookies.set("user", this.user, Infinity);
         }
     },
     mounted() {

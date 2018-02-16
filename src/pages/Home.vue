@@ -29,86 +29,32 @@
                 <i class="large chevron right icon"></i>
             </span>-->
 
-            <div class="row">
-                <div class="ui fluid grid centered container">
+            <div class="ui fluid grid centered container">
+                <div class="row">
                     <div class="ui link cards">
-                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
-                        <!--<a class="ui blue small card" href="#om">-->
-                            <div class="ui small centered image">
-                                <img src="../assets/om.jpg">
+                        <router-link :to="{ name: 'tickets.view', params:{id:ticket.ticket_id}}" class="ui card" :class="ticket.sport.color" v-for="ticket in tickets" :key="ticket.ticket_id">
+                            <div class="ui tiny centered image">
+                                <img :src="ticket.featured.url">
                             </div>
                             <div class="content">
                                 <div class="meta">
-                                    <span class="ui tiny tag label category">Football</span>
+                                    <span class="ui small tag label category">{{ticket.sport.name}}</span>
                                     <span class="right floated time">
-                                <i class="clock icon"></i>
-                                    09/02/18 - 19h
-                                </span>
+                                            <i class="clock icon"></i>{{ticket.date | frontEndDateFormat}}
+                                        </span>
                                 </div>
                                 <div class="ui clearing divider"></div>
                                 <div class="description">
-                                    <div class="ui small left aligned header">OLYMPIQUE DE MARSEILLE / SC BRAGA</div>
-                                    <p>EUROPA LEAGUE</p>
-                                    <span class="left floated">
+                                    <div class="ui small left aligned header">{{ticket.home | uppercase}} / {{ticket.visitor | uppercase}}</div>
+                                    <p>{{ticket.intro}}</p>
+                                    <p class="center aligned" style="margin-top:2em;">
                                         <i class="marker icon"></i>
-                                        Orange Velodrome
-                                    </span>
+                                        {{ticket.address}}
+                                    </p>
                                 </div>
                             </div>
                             <div class="extra content">
-                                <span class="right floated">à partir de <b>29€</b></span>
-                            </div>
-                        </router-link>
-                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
-                            <div class="ui small centered image">
-                                <img src="../assets/ol.jpg" alt="om">
-                            </div>
-                            <div class="content">
-                                <div class="meta">
-                                    <span class="ui tiny tag label category">Football</span>
-                                    <span class="right floated time">
-                                <i class="clock icon"></i>
-                                09/02/18 - 19h
-                                </span>
-                                </div>
-                                <div class="ui divider"></div>
-                                <div class="description">
-                                    <div class="ui small left aligned header">OLYMPIQUE LYONNAIS / SAINT-ETIENNE</div>
-                                    <p>LIGUE 1 CONFORAMA - 27EME JOURNEE</p>
-                                    <span class="left floated">
-                                        <i class="marker icon"></i>
-                                        Groupama stadium
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="extra content">
-                                <span class="right floated">à partir de <b>35€</b></span>
-                            </div>
-                        </router-link>
-                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
-                            <div class="ui small centered image">
-                                <img src="../assets/as_saint_etienne.jpg" alt="om">
-                            </div>
-                            <div class="content">
-                                <div class="meta">
-                                    <span class="ui tiny tag label category">Football</span>
-                                    <span class="right floated time">
-                                <i class="clock icon"></i>
-                                09/02/18 - 19h
-                                </span>
-                                </div>
-                                <div class="ui divider"></div>
-                                <div class="description">
-                                    <div class="ui small left aligned header">AS SAINT-ETIENNE / MARSEILLE</div>
-                                    <p>LIGUE 1 CONFORAMA - 25EME JOURNEE</p>
-                                    <span class="left floated">
-                                        <i class="marker icon"></i>
-                                        Stade Geoffroy
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="extra content">
-                                <span class="right floated">à partir de <b>39€</b></span>
+                                <p class="center aligned">à partir de <strong class="ui header">{{ticket.price}}€</strong></p>
                             </div>
                         </router-link>
                     </div>
@@ -118,88 +64,29 @@
             <div class="row">
                 <h2 class="ui header">Promotions</h2>
             </div>
-            <div class="row">
-                <div class="ui fluid grid centered container">
+            <div class="ui fluid grid centered container">
+                <div class="row">
                     <div class="ui link cards">
-                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
-                            <!--<a class="ui blue small card" href="#om">-->
-                            <div class="ui small centered image">
-                                <img src="../assets/om.jpg">
-                            </div>
-                            <div class="content">
-                                <div class="meta">
-                                    <span class="ui tiny tag label category">Football</span>
-                                    <span class="right floated time">
-                                <i class="clock icon"></i>
-                                    09/02/18 - 19h
-                                </span>
+                        <div class="ui four wide column doubling  link cards">
+                            <router-link :to="{ name: 'shop.view', params:{id:product.product_id}}" class="ui card"  v-for="product in products" :key="product.product_id">
+                                <div class="ui small centered image">
+                                    <img :src="product.featured.url">
                                 </div>
-                                <div class="ui clearing divider"></div>
-                                <div class="description">
-                                    <div class="ui small left aligned header">OLYMPIQUE DE MARSEILLE / SC BRAGA</div>
-                                    <p>EUROPA LEAGUE</p>
-                                    <span class="left floated">
-                                        <i class="marker icon"></i>
-                                        Orange Velodrome
-                                    </span>
+                                <div class="content">
+                                    <div class="meta">
+                                        <span class="ui small tag label category">{{product.type.name}}</span>
+                                    </div>
+                                    <div class="ui clearing divider"></div>
+                                    <div class="description">
+                                        <div class="ui small left aligned header">{{product.name}}</div>
+                                        <p>{{product.intro}}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="extra content">
-                                <span class="right floated">à partir de <b>29€</b></span>
-                            </div>
-                        </router-link>
-                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
-                            <div class="ui small centered image">
-                                <img src="../assets/ol.jpg" alt="om">
-                            </div>
-                            <div class="content">
-                                <div class="meta">
-                                    <span class="ui tiny tag label category">Football</span>
-                                    <span class="right floated time">
-                                <i class="clock icon"></i>
-                                09/02/18 - 19h
-                                </span>
+                                <div class="extra content">
+                                    <p class="center aligned"><strong class="ui header">{{product.price}}€</strong></p>
                                 </div>
-                                <div class="ui divider"></div>
-                                <div class="description">
-                                    <div class="ui small left aligned header">OLYMPIQUE LYONNAIS / SAINT-ETIENNE</div>
-                                    <p>LIGUE 1 CONFORAMA - 27EME JOURNEE</p>
-                                    <span class="left floated">
-                                        <i class="marker icon"></i>
-                                        Groupama stadium
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="extra content">
-                                <span class="right floated">à partir de <b>35€</b></span>
-                            </div>
-                        </router-link>
-                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
-                            <div class="ui small centered image">
-                                <img src="../assets/as_saint_etienne.jpg" alt="om">
-                            </div>
-                            <div class="content">
-                                <div class="meta">
-                                    <span class="ui tiny tag label category">Football</span>
-                                    <span class="right floated time">
-                                <i class="clock icon"></i>
-                                09/02/18 - 19h
-                                </span>
-                                </div>
-                                <div class="ui divider"></div>
-                                <div class="description">
-                                    <div class="ui small left aligned header">AS SAINT-ETIENNE / MARSEILLE</div>
-                                    <p>LIGUE 1 CONFORAMA - 25EME JOURNEE</p>
-                                    <span class="left floated">
-                                        <i class="marker icon"></i>
-                                        Stade Geoffroy
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="extra content">
-                                <span class="right floated">à partir de <b>39€</b></span>
-                            </div>
-                        </router-link>
+                            </router-link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -207,86 +94,32 @@
             <div class="row">
                 <h2 class="ui header">Autour de moi</h2>
             </div>
-            <div class="row">
-                <div class="ui fluid grid centered container">
+            <div class="ui fluid grid centered container">
+                <div class="row">
                     <div class="ui link cards">
-                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
-                            <!--<a class="ui blue small card" href="#om">-->
-                            <div class="ui small centered image">
-                                <img src="../assets/om.jpg">
+                        <router-link :to="{ name: 'tickets.view', params:{id:ticket.ticket_id}}" class="ui card" :class="ticket.sport.color" v-for="ticket in tickets" :key="ticket.ticket_id">
+                            <div class="ui tiny centered image">
+                                <img :src="ticket.featured.url">
                             </div>
                             <div class="content">
                                 <div class="meta">
-                                    <span class="ui tiny tag label category">Football</span>
+                                    <span class="ui small tag label category">{{ticket.sport.name}}</span>
                                     <span class="right floated time">
-                                <i class="clock icon"></i>
-                                    09/02/18 - 19h
-                                </span>
+                                            <i class="clock icon"></i>{{ticket.date | frontEndDateFormat}}
+                                        </span>
                                 </div>
                                 <div class="ui clearing divider"></div>
                                 <div class="description">
-                                    <div class="ui small left aligned header">OLYMPIQUE DE MARSEILLE / SC BRAGA</div>
-                                    <p>EUROPA LEAGUE</p>
-                                    <span class="left floated">
+                                    <div class="ui small left aligned header">{{ticket.home | uppercase}} / {{ticket.visitor | uppercase}}</div>
+                                    <p>{{ticket.intro}}</p>
+                                    <p class="center aligned" style="margin-top:2em;">
                                         <i class="marker icon"></i>
-                                        Orange Velodrome
-                                    </span>
+                                        {{ticket.address}}
+                                    </p>
                                 </div>
                             </div>
                             <div class="extra content">
-                                <span class="right floated">à partir de <b>29€</b></span>
-                            </div>
-                        </router-link>
-                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
-                            <div class="ui small centered image">
-                                <img src="../assets/ol.jpg" alt="om">
-                            </div>
-                            <div class="content">
-                                <div class="meta">
-                                    <span class="ui tiny tag label category">Football</span>
-                                    <span class="right floated time">
-                                <i class="clock icon"></i>
-                                09/02/18 - 19h
-                                </span>
-                                </div>
-                                <div class="ui divider"></div>
-                                <div class="description">
-                                    <div class="ui small left aligned header">OLYMPIQUE LYONNAIS / SAINT-ETIENNE</div>
-                                    <p>LIGUE 1 CONFORAMA - 27EME JOURNEE</p>
-                                    <span class="left floated">
-                                        <i class="marker icon"></i>
-                                        Groupama stadium
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="extra content">
-                                <span class="right floated">à partir de <b>35€</b></span>
-                            </div>
-                        </router-link>
-                        <router-link :to="{ name: 'tickets.view', params:{id:1}}" class="ui blue small card">
-                            <div class="ui small centered image">
-                                <img src="../assets/as_saint_etienne.jpg" alt="om">
-                            </div>
-                            <div class="content">
-                                <div class="meta">
-                                    <span class="ui tiny tag label category">Football</span>
-                                    <span class="right floated time">
-                                <i class="clock icon"></i>
-                                09/02/18 - 19h
-                                </span>
-                                </div>
-                                <div class="ui divider"></div>
-                                <div class="description">
-                                    <div class="ui small left aligned header">AS SAINT-ETIENNE / MARSEILLE</div>
-                                    <p>LIGUE 1 CONFORAMA - 25EME JOURNEE</p>
-                                    <span class="left floated">
-                                        <i class="marker icon"></i>
-                                        Stade Geoffroy
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="extra content">
-                                <span class="right floated">à partir de <b>39€</b></span>
+                                <p class="center aligned">à partir de <strong class="ui header">{{ticket.price}}€</strong></p>
                             </div>
                         </router-link>
                     </div>
