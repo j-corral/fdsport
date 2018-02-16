@@ -12,6 +12,7 @@
                         <div class="content">
                             <div class="meta">
                                 <span class="ui small tag label category">{{ticket.sport.name}}</span>
+                                <span class="ui small tag red label category" v-if="!ticket.is_fixed">Floating</span>
                                 <span class="right floated time">
                                     <i class="clock icon"></i>{{ticket.date | frontEndDateFormat}}
                                 </span>

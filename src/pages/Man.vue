@@ -25,6 +25,7 @@
                     <div class="content">
                         <div class="meta">
                             <span class="ui small tag label category">{{product.type.name}}</span>
+                            <span class="ui small tag red label category" v-if="!product.is_fixed">Floating</span>
                         </div>
                         <div class="ui clearing divider"></div>
                         <div class="description">
