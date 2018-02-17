@@ -8,7 +8,7 @@ export default {
     },
     methods: {
         getTickets() {
-            this.$ticket = this.$resource('tickets{/id}', {}, {}, {
+            this.$ticket = this.$resource('tickets/shortly/3', {}, {}, {
                 before: () => {
                     this.loading = true
                 },
@@ -21,7 +21,7 @@ export default {
             })
         },
         getProducts() {
-            this.$products = this.$resource('products{/id}', {}, {}, {
+            this.$products = this.$resource('products/newest/4', {}, {}, {
                 before: () => {
                     this.loading = true
                 },
