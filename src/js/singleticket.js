@@ -15,7 +15,8 @@ export default {
             })
             this.$ticket.query({id:this.$route.params.id}).then((response) => {
                 this.ticket = response.data
-                console.log(this.ticket)
+                this.$cookies.set("item", JSON.stringify(this.ticket), Infinity);
+                // console.log(this.ticket)
             }, (response) => {
                 console.log('error', response)
             })
@@ -45,7 +46,7 @@ export default {
                 }
             }).then((response) => {
                 this.user = response.data
-                console.log('Put envoyé', this.user)
+                // console.log('Put envoyé', this.user)
             }, (response) => {
                 console.log('error', response)
             })

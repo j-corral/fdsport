@@ -16,6 +16,7 @@ export default {
             })
             this.$article.query({id: this.$route.params.id}).then((response) => {
                 this.article = response.data
+                this.$cookies.set("item", JSON.stringify(this.article), Infinity);
                 // console.log(this.article)
             }, (response) => {
                 console.log('error', response)
@@ -47,7 +48,7 @@ export default {
             }).then((response) => {
                 this.user = response.data
                 this.$cookies.set("user", JSON.stringify(this.user), Infinity);
-                console.log('Put envoyé', this.user)
+                // console.log('Put envoyé', this.user)
             }, (response) => {
                 console.log('error', response)
             })
