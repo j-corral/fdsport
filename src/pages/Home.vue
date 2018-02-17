@@ -19,7 +19,7 @@
             <!-- News -->
             <div class="ui section divider"></div>
             <div class="row">
-                <h2 class="ui header center aligned">Nouveautés et actualités</h2>
+                <h2 class="ui header center aligned">Prochainement</h2>
                 <router-link :to="{ name: 'tickets'}" class="ui left pointing label">
                     voir plus..
                 </router-link>
@@ -35,7 +35,7 @@
             <div class="ui fluid grid centered container">
                 <div class="row">
                     <div class="ui link cards">
-                        <router-link :to="{ name: 'tickets.view', params:{id:ticket.ticket_id}}" class="ui card" :class="ticket.sport.color" v-for="ticket in tickets.slice(0,3)" :key="ticket.ticket_id">
+                        <router-link :to="{ name: 'tickets.view', params:{id:ticket.ticket_id}}" class="ui card" :class="ticket.sport.color" v-for="ticket in tickets" :key="ticket.ticket_id">
                             <div class="ui tiny centered image">
                                 <img :src="ticket.featured.url">
                             </div>
@@ -65,7 +65,7 @@
             </div>
             <div class="ui section divider"></div>
             <div class="row">
-                <h2 class="ui header">Promotions</h2>
+                <h2 class="ui header">Nouveautés</h2>
                 <router-link :to="{ name: 'shop'}" class="ui left pointing label">
                     voir plus..
                 </router-link>
@@ -104,7 +104,7 @@
             <div class="ui fluid grid centered container">
                 <div class="row">
                     <div class="ui link cards">
-                        <router-link :to="{ name: 'tickets.view', params:{id:ticket.ticket_id}}" class="ui card" :class="ticket.sport.color" v-for="ticket in tickets.slice(0,3)" :key="ticket.ticket_id">
+                        <router-link :to="{ name: 'tickets.view', params:{id:ticket.ticket_id}}" class="ui card" :class="ticket.sport.color" v-for="ticket in tickets" :key="ticket.ticket_id">
                             <div class="ui tiny centered image">
                                 <img :src="ticket.featured.url">
                             </div>
