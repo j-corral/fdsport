@@ -54,13 +54,17 @@ export default {
             })
         },
         getSuggestedProducts() {
-            this.$products = this.$resource('products/newest/4', {}, {}, {
+            this.$products = this.$resource('products/suggested{/cookie}', {}, {}, {
                 before: () => {
                     this.loading = true
                 },
                 after: () => this.loading = false
             });
-            this.$products.query().then((response) => {
+            this.$products.query({
+                cookie: this.$cookies.get('user_id'),
+                product_id: this.$route.params.id,
+                limit: 4
+            }).then((response) => {
                 this.products = response.data;
             }, (response) => {
                 console.log('error', response)
