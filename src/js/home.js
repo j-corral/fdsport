@@ -3,6 +3,8 @@ export default {
         return {
             tickets:[],
             products:[],
+            currentLocation:false,
+            nearestCity:false,
             loading:false,
         }
     },
@@ -32,10 +34,47 @@ export default {
             }, (response) => {
                 console.log('error', response)
             })
+        },
+        getLocation() {
+            if ('geolocation' in navigator) {
+
+                this.$location = this.$resource('city/{name}', {}, {}, {
+                    before: () => {
+                        this.loading = true
+                    },
+                    after: () => this.loading = false
+                })
+
+                let gl = navigator.geolocation
+                gl.getCurrentPosition(function(position) {
+                    this.currentLocation = position.coords
+                    //console.log(this.currentLocation)
+
+                    if(this.currentLocation) {
+                        let coordinates = this.currentLocation.latitude + ',' + this.currentLocation.longitude
+                        this.$location.query({name: coordinates}).then((response) => {
+
+                            if(response.data.max_distance) {
+                                this.nearestCity = response.data.max_distance['50000']['0'].city.toLowerCase()
+                            } else {
+                                this.nearestCity = false
+                            }
+                        }, (response) => {
+                            console.log('error', response)
+                        })
+                    }
+
+                }.bind(this)) // bind to `this` so it's the current component.
+
+            } else {
+                this.currentLocation = false
+                console.log('no geolocation !')
+            }
         }
     },
     mounted(){
-        this.getProducts();
-        this.getTickets();
+        this.getProducts()
+        this.getTickets()
+        this.getLocation()
     }
 }
