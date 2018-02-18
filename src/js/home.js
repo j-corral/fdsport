@@ -48,7 +48,7 @@ export default {
                 let gl = navigator.geolocation
                 gl.getCurrentPosition(function(position) {
                     this.currentLocation = position.coords
-                    //console.log(this.currentLocation)
+                    console.log(this.currentLocation)
 
                     if(this.currentLocation) {
                         let coordinates = this.currentLocation.latitude + ',' + this.currentLocation.longitude
@@ -56,6 +56,7 @@ export default {
 
                             if(response.data.max_distance) {
                                 this.nearestCity = response.data.max_distance['50000']['0'].city.toLowerCase()
+                                console.log(this.nearestCity)
                             } else {
                                 this.nearestCity = false
                             }
