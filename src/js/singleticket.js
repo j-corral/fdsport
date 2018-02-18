@@ -2,6 +2,7 @@ export default {
     data() {
         return {
             ticket:[],
+            tickets:[],
             loading:false,
         }
     },
@@ -50,11 +51,25 @@ export default {
             }, (response) => {
                 console.log('error', response)
             })
+        },
+        getSuggestedTickets() {
+            this.$ticket = this.$resource('tickets/shortly/3', {}, {}, {
+                before: () => {
+                    this.loading = true
+                },
+                after: () => this.loading = false
+            })
+            this.$ticket.query().then((response) => {
+                this.tickets = response.data
+            }, (response) => {
+                console.log('error', response)
+            })
         }
     },
     mounted() {
-        this.getTicket()
-        this.trackUserTicket()
+        this.getTicket();
+        this.trackUserTicket();
+        this.getSuggestedTickets();
     }
 
 }
