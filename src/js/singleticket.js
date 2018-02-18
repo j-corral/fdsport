@@ -2,7 +2,7 @@ export default {
     data() {
         return {
             ticket:[],
-            tickets:[],
+            products:[],
             loading:false,
         }
     },
@@ -52,15 +52,18 @@ export default {
                 console.log('error', response)
             })
         },
-        getSuggestedTickets() {
-            this.$ticket = this.$resource('tickets/shortly/3', {}, {}, {
+        getSuggestedProducts() {
+            this.$products = this.$resource('products/suggested{/cookie}', {}, {}, {
                 before: () => {
                     this.loading = true
                 },
                 after: () => this.loading = false
-            })
-            this.$ticket.query().then((response) => {
-                this.tickets = response.data
+            });
+            this.$products.query({
+                cookie: this.$cookies.get('user_id'),
+                limit: 4
+            }).then((response) => {
+                this.products = response.data;
             }, (response) => {
                 console.log('error', response)
             })
@@ -69,7 +72,7 @@ export default {
     mounted() {
         this.getTicket();
         this.trackUserTicket();
-        this.getSuggestedTickets();
+        this.getSuggestedProducts();
     }
 
 }
