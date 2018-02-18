@@ -2,7 +2,7 @@ export default {
     data() {
         return {
             article:[],
-            // user:[],
+            products:[],
             loading:true,
         }
     },
@@ -52,10 +52,28 @@ export default {
             }, (response) => {
                 console.log('error', response)
             })
+        },
+        getSuggestedProducts() {
+            this.$products = this.$resource('products/suggested{/cookie}', {}, {}, {
+                before: () => {
+                    this.loading = true
+                },
+                after: () => this.loading = false
+            });
+            this.$products.query({
+                cookie: this.$cookies.get('user_id'),
+                product_id: this.$route.params.id,
+                limit: 4
+            }).then((response) => {
+                this.products = response.data;
+            }, (response) => {
+                console.log('error', response)
+            })
         }
     },
     mounted() {
-        this.getProduct()
-        this.trackUserProduct()
+        this.getProduct();
+        this.trackUserProduct();
+        this.getSuggestedProducts();
     }
 }

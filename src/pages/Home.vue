@@ -9,11 +9,46 @@
                 <form action="#" class="ui form">
                     <div class="inline fields">
                         <div class="field">
-                            <input type="text" placeholder="Votre club">
+                            <input type="text" v-model="nearestCity" placeholder="Votre club">
                         </div>
-                        <div class="ui submit button">Ajouter</div>
+                        <div class="ui submit button disabled">Ajouter</div>
                     </div>
                 </form>
+            </div>
+
+            <!--<div class="row" v-if="this.nearestCity">
+                <h2 class="ui header">Prochainement à {{this.nearestCity}}</h2>
+            </div>-->
+            <div class="ui fluid grid centered container" v-if="this.nearestCity">
+                <div class="row">
+                    <div class="ui link cards">
+                        <router-link :to="{ name: 'tickets.view', params:{id:ticket.ticket_id}}" class="ui card" :class="ticket.sport.color" v-for="ticket in tickets" :key="ticket.ticket_id" v-if="nearestCity && ticket.axe.city === nearestCity">
+                            <div class="ui tiny centered image">
+                                <img :src="ticket.featured.url">
+                            </div>
+                            <div class="content">
+                                <div class="meta">
+                                    <span class="ui small tag label category">{{ticket.sport.name}}</span>
+                                    <span class="right floated time">
+                                            <i class="clock icon"></i>{{ticket.date | frontEndDateFormat}}
+                                        </span>
+                                </div>
+                                <div class="ui clearing divider"></div>
+                                <div class="description">
+                                    <div class="ui small left aligned header">{{ticket.home | uppercase}} / {{ticket.visitor | uppercase}}</div>
+                                    <p>{{ticket.intro}}</p>
+                                    <p class="center aligned" style="margin-top:2em;">
+                                        <i class="marker icon"></i>
+                                        {{ticket.address}}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <p class="center aligned">à partir de <strong class="ui header">{{ticket.price}}€</strong></p>
+                            </div>
+                        </router-link>
+                    </div>
+                </div>
             </div>
 
             <!-- News -->
@@ -98,41 +133,6 @@
                 </div>
             </div>
             <div class="ui section divider"></div>
-            <div class="row">
-                <h2 class="ui header">Autour de moi</h2>
-                <router-link :to="{ name: 'tickets'}" class="ui left pointing label">voir plus..</router-link>
-            </div>
-            <div class="ui fluid grid centered container">
-                <div class="row">
-                    <div class="ui link cards">
-                        <router-link :to="{ name: 'tickets.view', params:{id:ticket.ticket_id}}" class="ui card" :class="ticket.sport.color" v-for="ticket in tickets" :key="ticket.ticket_id">
-                            <div class="ui tiny centered image">
-                                <img :src="ticket.featured.url">
-                            </div>
-                            <div class="content">
-                                <div class="meta">
-                                    <span class="ui small tag label category">{{ticket.sport.name}}</span>
-                                    <span class="right floated time">
-                                            <i class="clock icon"></i>{{ticket.date | frontEndDateFormat}}
-                                        </span>
-                                </div>
-                                <div class="ui clearing divider"></div>
-                                <div class="description">
-                                    <div class="ui small left aligned header">{{ticket.home | uppercase}} / {{ticket.visitor | uppercase}}</div>
-                                    <p>{{ticket.intro}}</p>
-                                    <p class="center aligned" style="margin-top:2em;">
-                                        <i class="marker icon"></i>
-                                        {{ticket.address}}
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="extra content">
-                                <p class="center aligned">à partir de <strong class="ui header">{{ticket.price}}€</strong></p>
-                            </div>
-                        </router-link>
-                    </div>
-                </div>
-            </div>
 
             <!--Links to articles-->
             <div class="ui section divider"></div>
@@ -186,6 +186,7 @@
                     </div>
             </div>
         </div>
+        <div class="ui section divider"></div>
     </div>
 </template>
 <script src="../js/home.js"></script>

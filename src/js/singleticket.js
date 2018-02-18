@@ -2,6 +2,7 @@ export default {
     data() {
         return {
             ticket:[],
+            products:[],
             loading:false,
         }
     },
@@ -50,11 +51,28 @@ export default {
             }, (response) => {
                 console.log('error', response)
             })
+        },
+        getSuggestedProducts() {
+            this.$products = this.$resource('products/suggested{/cookie}', {}, {}, {
+                before: () => {
+                    this.loading = true
+                },
+                after: () => this.loading = false
+            });
+            this.$products.query({
+                cookie: this.$cookies.get('user_id'),
+                limit: 4
+            }).then((response) => {
+                this.products = response.data;
+            }, (response) => {
+                console.log('error', response)
+            })
         }
     },
     mounted() {
-        this.getTicket()
-        this.trackUserTicket()
+        this.getTicket();
+        this.trackUserTicket();
+        this.getSuggestedProducts();
     }
 
 }
