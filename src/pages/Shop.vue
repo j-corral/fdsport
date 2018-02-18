@@ -62,6 +62,9 @@
                 <router-link :to="{ name: 'shop.accessories'}" class="column">
                     <h2>Accessoires</h2>
                 </router-link>
+                <router-link :to="{ name: 'shop.equipment'}" class="column">
+                    <h2>Matériel</h2>
+                </router-link>
             </div>
 
             <div class="ui section divider"></div>
