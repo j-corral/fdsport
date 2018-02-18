@@ -86,7 +86,7 @@
                 <div class="row">
                     <div class="ui link cards">
                         <div class="ui four wide column doubling  link cards">
-                            <router-link :to="{ name: 'shop.view', params:{id:product.product_id}}" class="ui card"  v-for="product in products" :key="product.product_id">
+                            <router-link target="_blank" :to="{ name: 'shop.view', params:{id:product.product_id}}" class="ui card"  v-for="product in products" :key="product.product_id">
                                 <div class="ui small centered image">
                                     <img :src="product.featured.url">
                                 </div>
